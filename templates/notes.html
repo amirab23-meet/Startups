@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="icon" type="x-icon" href="/static/meet.png">
+  <link rel='stylesheet' href='static/smth.css'/>
+  <title>Q&A</title>
+<header id="header">
+  <script src="navbar.js"></script>
+  <img class="site-logo" id="logo" src="/static/meet.png" width="150" height="70">
+  <div><center><h1 style="color:black
+;">    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Questions and Answers about the startups</h1></center></div>  
+    <ul>
+      <li><a href="{{url_for('design')}}">Home</a></li>
+      <li><a href="{{url_for('main')}}">Quiz</a></li>
+      <li><a href="{{url_for('notes')}}"> Q&A</a></li>
+      <li><a href="{{url_for('posts')}}">Posts</a></li>
+      <li><a href="{{url_for('signin')}}" onclick="return confirm('Are you sure you want to Sign out ?');">sign out</a></li>
+    </ul>
+</header>
+<body>
+<br><br><br><br>
+
+    <h1 align="middle" style='color:darkgray;'> Here you can find questions and the answers to them about our startups</h1>
+    <h1 align="middle" style='color:darkgray;'>If you have a question that isn't answered you can submit them below</h1>
+    <br>
+    <h1 align="left" style="color:burlywood;">GENERAL QUESTIONS:</h1>
+    <h2>Q1.Who decided which startups passed on the next stage?</h2><br>
+    <h2>A1.The teams that gathered the most investments by promoting their startup (not real money) , and only 9 passed onto the next stage</h2><br>
+    <h2>Q2.Out of how many startups does the winning projects pass?</h2><br>
+    <h2>A2.Well it depends on how many startups are there , for example last year out of 18 startups 8 passed , However this year out of 21 startups 9 passed</h2><br>
+    <h2>Q3.What is a startup?</h2><br>
+    <h2>A3.Startups are companies or ventures that are focused on a single product or service that the founders want to bring to market. These companies typically don't have a fully developed business model and, more crucially, lack adequate capital to move onto the next phase of business.</h2><br>
+    <h2>Q4.What happens after this stage?</h2><br>
+    <h2>A4.After this stage the students with the losing startups join the winning startups and they compete in the summer , in the end only 1 startup wins.</h2><br>
+    <h2>Q5.What are the most popular startups?</h2><br>
+    <h2>A5.There is no piece of information containing the most "popular" startup , However the last update that we recieved indicated that "Fortuna" was the most popular.</h2><br>
+    <h2>Q6.Can i work on a startup alone?</h2><br>
+    <h2>A6.In order to work on a startup alone you have to find the perfect balance between being a good Developer , Designer , Uxer and Product manager , but working in teams is always more efficient and less stressful. </h2><br>
+    <br>
+    <h1 align="left" style="color:burlywood;">STARTUP QUESTIONS:</h1>
+    <h2>Q1.SwiftAid-How does the app send that i'm in an emergency?</h2><br>
+    <h2>A1.in SwiftAid's app there's a button that is connected to the closest hospital using location services and when you click it , the hospital will be informed.</h2><br>
+    <h2>Q2.Soul-As a musician how can "Soul" help me?</h2><br>
+    <h2>A2.In addition to connecting you with other musicians and giving you oppurtinities , Soul provides you with a platform solely for artists to improve by getting constructive criticism away from jedgement.</h2><br>
+    <h2>Q3.SimanLy-Why is it important to learn sign language?</h2><br>
+    <h2>A3.Mainly learning sign language makes the deaf community feel included as well , and it's never bad to learn a new language when the tools make it easier.</h2><br>
+    <h2>Q4.LightHouse-Can't women inform the police about the harassment that happened to them?</h2><br>
+    <h2>A4.Well no! , On top of them fearing to be killed by their families because of the harassment , having a safe space where they can vent anonymously may spare them the pain that they are in.</h2><br>
+    <h2>Q5.Acteen'-What assures you that the teens making events won't organize revolutions?</h2><br>
+    <h2>A5.While this is always a possibility across many platforms , the teens are planning events based on topics that they care about , that's why this possibility isn't likely to happen.</h2><br>
+    <h2>Q6.Fortuna-As a shop owner what would i benefit from being on the platform?</h2><br>
+    <h2>A6.On top making the accessibility easier for the users to the shops you're getting marketing by hosting the experience workshops.</h2>
+    <br>
+
+<form >
+    <div><center>
+      <h1 align="middle" style='color:darkgray;'>Submit the question here and we will try to answer ASAP</h1>
+            <label><h2>select the startup you want to ask:</h2></label>
+            <div>
+                <select name="question">
+                    <option value="SwiftAid">General</option>
+                    <option value="SwiftAid">SwiftAid</option>
+                    <option value="Acteen'">Acteen'</option>
+                    <option value="Soul">Soul</option>
+                    <option value="Spectra">Spectra</option>
+                    <option value="SimanLy">SimanLy</option>
+                    <option value="Safesteps">Safesteps</option>
+                    <option value="easiER">easiER</option>
+                    <option value="Lighthouse">Lighthouse</option>
+                    <option value="Fortuna">Fortuna</option>
+                </select>
+            </div>
+        </div><br>
+        <div><center><label><h2>Write your question here:</h2></label>
+          <div>
+          
+
+<input name="myquestion" placeholder="Why is this website so cool?">
+
+
+
+<br>
+        </div></center></div>
+        <div><center><br>
+            <button><a href="{{url_for('notes')}}" onclick="return confirm('Your question has been submitted');">SUBMIT</a>
+            </button></center>
+        </div><br><br>
+    </form></center>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>

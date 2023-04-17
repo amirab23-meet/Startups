@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<link rel="icon" type="x-icon" href="/static/lock.webp">
+<link rel='stylesheet' href='/static/smth.css'/>
+<link rel='stylesheet' href='/static/sign.css'/>
+
+    
+    <title>Signin</title>
+    <header id="header">
+  
+  <script src="navbar.js"></script>
+  <img class="site-logo" id="logo" src="/static/meet.png" width="150" height="70">
+  <div><center><h1 align="middle" style="color:black
+;">Sign in to your account&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</h1></center></div>  
+<ul>
+      
+      <li><a href="{{url_for('signup')}}">I'm New</a></li>
+          
+    </ul>
+</header>
+
+
+</head>
+<body>
+    <br><br><br><br>
+<center><h1 style="color:darkgray;
+;" style="font-family:verdana">Welcome To Meet's startups!</h1></center>
+
+    <form method="POST" action="/">
+        <!-- Heading --><center>
+        <h4>
+        Log in to your account
+        </h4>
+
+        <!-- Subheading -->
+        <p >
+        fill up your info to sign in.
+        </p>
+
+        <!-- Email -->
+        <div>
+            <label>Email address</label>
+            <div>
+                <input type="email"  name="email" id="emailStr" required placeholder="email@example.com">
+
+            </div>
+        </div><br>
+
+        <!-- Password -->
+        <div>
+            <label>Password</label>
+            <div >
+                <input type="password"  name="password" minlength="6" placeholder="Password">
+            </div>
+        </div><br>
+        
+        <!-- Button -->
+        <div>
+            <input type="submit"/>
+        </div>
+    </form>
+    
+</center>
+
+
+</form>
+
+<br><br><br>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>
+</html>
